@@ -1,5 +1,9 @@
 package com.hendisantika.loadingdata.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 /**
@@ -13,6 +17,9 @@ import javax.persistence.*;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Person {
 
     @Id
@@ -25,27 +32,4 @@ public class Person {
     @Column(name = "first_name")
     private String firstName;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
 }
